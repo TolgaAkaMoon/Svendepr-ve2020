@@ -8,17 +8,14 @@ document.addEventListener("DOMContentLoaded", function () {
   button.addEventListener("click", function () {
     if (email.value !== "") {
       document.querySelector(".form__user--error").style.opacity = "0";
-      fetch("https://reqres.in/api/login", {
-        method: "POST",
-        body: JSON.stringify({
-          method: "POST",
-          email: email.value,
-          password: pass.value,
-        }),
-        headers: {
-          "Content-type": "application/json; charset=UTF-8",
+      fetch("http://localhost:4000/auth/token", {
+        "method": "POST",
+        "headers": {
+          "Content-Type": "application/x-www-form-urlencoded"
         },
+        "body": `username=${email.value}&password=${pass.value}`
       })
+
         .then((response) => response.json())
         .then((data) => {
           if (data.token !== undefined) {
