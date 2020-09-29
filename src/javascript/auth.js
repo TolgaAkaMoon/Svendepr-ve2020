@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
   button.addEventListener("click", function () {
     if (email.value !== "") {
       document.querySelector(".form__user--error").style.opacity = "0";
-      fetch("http://localhost:4000/auth/token", {
+      fetch("https://svende-api-tolga.herokuapp.com/auth/token", {
         "method": "POST",
         "headers": {
           "Content-Type": "application/x-www-form-urlencoded"
