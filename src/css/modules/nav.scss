@@ -1,29 +1,72 @@
   .topnav {
     overflow: hidden;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-evenly;
     height: 50px;
     align-items: center;
     flex-direction: row;
     background-color: var(--nav_background_color);
+  }
+
+  .topnav__logo {
+    color: var(--nav_font_color);
+    width: 355px;
+    height: 40px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-family: var(--nav_font_family);
+  }
+
+  .logo__img {
+    width: 50px;
+    height: 40px;
+  }
+
+  
+  .logo__text {
+    margin-left: 10px;
+    font-family: var(--nav_font_family);
+    color: black;
+    font-size: 1.5rem;
+    letter-spacing: -2px;
   }
   
   .topnav a {
     font-family: var(--nav_font_family);
     color: var(--nav_font_color);
     text-align: center;
-    padding: 14px 16px;
+    margin: 13px 5px;
+    letter-spacing: -1px;
     text-decoration: none;
     font-size: var(--nav_font_size);
+
+  }
+
+  .ul__link {
+    font-family: var(--nav_font_family);
+    display: flex;
+    justify-content: space-evenly;
+    color: var(--nav_font_color);
+    list-style-type: none;
+    flex-grow: 1;
+    font-size: var(--nav_font_size);
+    flex-shrink: 0;
+  }
+
+  .topnav__ul {
+    display: flex;
+    align-items: center;
+    flex-grow: 0;
   }
   
   .topnav a:hover {
-    background-color: #ddd;
     color: black;
   }
   
   .topnav a.active {
-    color: var(--nav_fontActive_size);
+    color: black;
+    
   }
   
   .topnav .icon {
