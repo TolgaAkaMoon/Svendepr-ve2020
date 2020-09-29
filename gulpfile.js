@@ -53,19 +53,8 @@ function watchJavascript() {
 	gulp.watch("./src/javascript/**/*.js", { ignoreInitial: false }, javascript);
 }
 
-function json(done) {
-	gulp.src("./src/json/*.json")
-		.pipe(gulp.dest("./dist/data"))
-		.pipe(connect.reload());
-	done();
-}
-
-function watchJson() {
-	gulp.watch("./src/json/*.json", { ignoreInitial: false }, json);
-}
-
 function images(done) {
-	gulp.src("./src/images/*")
+	gulp.src("./src/images/**/*/*")
 		.pipe(imagemin())
 		.pipe(gulp.dest("./dist/assets/images"))
 		.pipe(connect.reload());
@@ -73,14 +62,13 @@ function images(done) {
 }
 
 function watchImages() {
-	gulp.watch("./src/images/*", { ignoreInitial: false }, images);
+	gulp.watch("./src/images/**/*/*", { ignoreInitial: false }, images);
 }
 
 gulp.task("dev", function(done) {
 	watchHtml();
 	watchScss();
 	watchJavascript();
-	watchJson();
 	watchImages();
 	connect.server({
 		livereload: true,
@@ -93,7 +81,6 @@ gulp.task("build", function(done) {
 	html(done);
 	scss(done);
 	javascript(done);
-	json(done);
 	images(done);
 	done();
 });

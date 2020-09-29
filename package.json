@@ -9,19 +9,20 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/HappyHomie/G-M.git"
+    "url": "git+https://github.com/TolgaAkaMoon/Gulp-template.git"
   },
   "keywords": [],
-  "author": "Tobias Eskou",
+  "author": "Tolga Ozdemir",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/HappyHomie/G-M/issues"
+    "url": "https://github.com/TolgaAkaMoon/Gulp-template/issues"
   },
-  "homepage": "https://github.com/HappyHomie/G-M#readme",
+  "homepage": "https://github.com/TolgaAkaMoon/Gulp-template#readme",
   "dependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
+    "@babel/core": "^7.11.1",
+    "@babel/preset-env": "^7.11.0",
     "babel": "^6.23.0",
+    "flickity": "^2.2.1",
     "gulp": "^4.0.2",
     "gulp-babel": "^8.0.0",
     "gulp-connect": "^5.7.0",
@@ -29,6 +30,7 @@
     "gulp-imagemin": "^6.2.0",
     "gulp-rename": "^1.4.0",
     "gulp-sass": "^4.0.2",
-    "node-sass": "^4.13.0"
+    "node-sass": "^4.13.0",
+    "swiper": "^6.1.2"
   }
 }

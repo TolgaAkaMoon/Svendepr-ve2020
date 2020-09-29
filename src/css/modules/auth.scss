@@ -1,0 +1,47 @@
+.auth {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.auth__validation {
+    font-family: var(--validation_fontFamily);
+    outline: none;
+}
+
+.form__user {
+    font-family: var(--validation_fontFamily);
+    outline: none;
+}
+
+.form__pass {
+    font-family: var(--validation_fontFamily);
+    outline: none;
+}
+
+.form__button {
+    font-family: var(--validation_fontFamily);
+    outline: none;
+}
+
+.form__user--error {
+    margin: 0;
+    padding: 0 ;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: var(--validation_fontFamily);
+    color: red;
+    text-align: center;
+}
+
+.form__pass--error {
+    margin: 0;
+    padding: 0 ;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: var(--validation_fontFamily);
+    color: red;
+    text-align: center;
+}
