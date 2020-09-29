@@ -1,6 +1,4 @@
-# Gulp.js Project Template
-This template is meant as a simple starting point for your front-end projects.
-It supports EJS, and SCSS (Sass).
+# Svendeprøve - 2020 - WUHF02
 
 ## Installation
 Clone this git to your new project folder.

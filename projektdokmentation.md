@@ -13,14 +13,14 @@
   - Netlify
   - GitHub
 
-- __[Mit Site](https://nodeca.github.io/pica/demo/)__ 
-- __[Mit Login](https://nodeca.github.io/pica/demo/)__ 
+- __[Mit Site](https://svendeprove-tolga.netlify.app/)__ 
+- __[Mit Login](https://svendeprove-tolga.netlify.app/admin)__ 
 + Info til login:
   - Brugernavn:
   - Kode:
 
 ---
 ### Kanban Board (Lavet på GitHub)
-  ![Minion](https://octodex.github.com/images/minion.png)
+  ![Kanban](http://image.com)
 
 ---
