@@ -1,0 +1,23 @@
+.about {
+    width: 100vw;
+    background: #ffffff;
+    height: 300px;
+    font-family: var(--nav_font_family);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about__section {
+    width: 324px;
+}
+
+.section__aboutText {
+    color: rgb(0, 102, 255);
+    letter-spacing: -1px;
+}
+
+.section__aboutDesc {
+    width: 300px;
+    letter-spacing: -1px;
+}
