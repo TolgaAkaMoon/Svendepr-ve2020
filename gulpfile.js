@@ -54,7 +54,7 @@ function watchJavascript() {
 }
 
 function images(done) {
-	gulp.src("./src/images/**/*/*")
+	gulp.src("./src/content/**/*/*")
 		.pipe(imagemin())
 		.pipe(gulp.dest("./dist/assets/images"))
 		.pipe(connect.reload());
@@ -62,7 +62,7 @@ function images(done) {
 }
 
 function watchImages() {
-	gulp.watch("./src/images/**/*/*", { ignoreInitial: false }, images);
+	gulp.watch("./src/content/**/*/*", { ignoreInitial: false }, images);
 }
 
 gulp.task("dev", function(done) {
