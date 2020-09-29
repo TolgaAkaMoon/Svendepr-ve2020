@@ -1,14 +1,15 @@
   .topnav {
     overflow: hidden;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+    height: 50px;
     align-items: center;
+    flex-direction: row;
     background-color: var(--nav_background_color);
   }
   
   .topnav a {
     font-family: var(--nav_font_family);
-    display: block;
     color: var(--nav_font_color);
     text-align: center;
     padding: 14px 16px;
