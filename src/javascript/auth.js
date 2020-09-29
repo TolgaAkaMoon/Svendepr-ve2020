@@ -3,8 +3,6 @@ document.addEventListener("DOMContentLoaded", function () {
   let pass = document.querySelector(".form__pass");
   let button = document.querySelector(".form__button");
 
-//
-
   button.addEventListener("click", function () {
     if (email.value !== "") {
       document.querySelector(".form__user--error").style.opacity = "0";
