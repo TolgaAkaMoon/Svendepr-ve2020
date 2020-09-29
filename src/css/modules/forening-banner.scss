@@ -1,12 +1,28 @@
 .forening-banner {
     width: 100vw;
-    background-image: url(../images/);
+    height: 300px;
+    background-image: url(../images/header/kittens.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    font-family: var(--nav_font_family);
 }
 
-.forening-banner__text {
-
+.forening-banner__box {
+    margin-left: -35vw;
+    margin-top: 50px;
 }
 
-.forening-banner__desc {
+.box__text {
+    color: white;
+    font-size: 2.5rem;
+    letter-spacing: -1px;
+}
 
+.box__desc {
+    font-size: 1rem;
+    margin-top: -15px;
+    color: white;
+    letter-spacing: -1px;
 }
