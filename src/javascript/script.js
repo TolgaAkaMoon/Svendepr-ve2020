@@ -8,7 +8,10 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log(about)
             about.forEach(omos => {
                 document.querySelector(".about").innerHTML += `
-                
+                <section class="about__section">
+                    <h2 class="section__aboutText">${omos.title}</h2>
+                    <p class="section__aboutDesc">${omos.content}</p>
+                </section>
                 `
             });
         })
