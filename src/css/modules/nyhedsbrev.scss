@@ -5,13 +5,14 @@
     margin-top: 0;
     height: 200px;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     justify-items: center;
     align-items: center;
 }
 
 .nyhedsbrev__box {
-    width: 370px;
+    width: auto;
+    margin-right: 190px;
 }
 
 .box__textBrev {

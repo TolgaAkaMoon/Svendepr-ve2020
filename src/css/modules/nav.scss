@@ -1,11 +1,12 @@
   .topnav {
     overflow: hidden;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     height: 65px;
     align-items: center;
     flex-direction: row;
     background-color: var(--nav_background_color);
+    gap: 120px;
   }
 
   .topnav__logo {
@@ -25,6 +26,7 @@
 
   
   .logo__text {
+    flex-grow: 2;
     margin-left: 10px;
     font-family: var(--nav_font_family);
     color: black;
@@ -55,6 +57,7 @@
   }
 
   .topnav__ul {
+    margin-left: 100px;
     display: flex;
     align-items: center;
     flex-grow: 0;
