@@ -1,17 +1,57 @@
 .footer {
+    margin-top: 65px;
     width: 100vw;
+    height: 250px;
     display: flex;
-    justify-content: space-evenly;
+    background: #E2EDFF;
+    justify-content: center;
+    font-family: var(--nav_font_family);
+    bottom: 0;
 }
 
 .footer__kontakt {
+    margin-top: 30px;
+    color: black;
+    letter-spacing: -1px;
+    width: 400px
+}
 
+.kontakt__text {
+    color: black;
+    letter-spacing: -1px;
+    list-style-type: none;
+}
+
+.kontakt__header {
+    text-transform: uppercase;
+    letter-spacing: -1px;
 }
 
 .footer__copyright {
+    width: 450px;
+    margin: 0;
+}
 
+.copyright__text {
+    letter-spacing: -1px;
+    margin-top: 220px;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 .footer__partner {
+    margin-top: 30px;
+    letter-spacing: -1px;
+    width: 150px
+}
 
+.partner__text {
+    letter-spacing: -1px;
+    text-transform: uppercase;
+}
+
+.partner__link {
+    color: rgb(0, 140, 255);
+    letter-spacing: -1px;
+    list-style-type: none;
 }
