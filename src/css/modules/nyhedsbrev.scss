@@ -1,0 +1,65 @@
+.nyhedsbrev {
+    width: 100vw;
+    background: #E2EDFF;
+    font-family: var(--nav_font_family);
+    margin-top: 0;
+    height: 200px;
+    display: flex;
+    justify-content: space-evenly;
+    justify-items: center;
+    align-items: center;
+}
+
+.nyhedsbrev__box {
+    width: 370px;
+}
+
+.box__textBrev {
+    color: rgb(0, 102, 255);
+    letter-spacing: -1px;
+    margin: 0;
+    margin-top: -70px;
+}
+
+.box__descBrev {
+    font-size: 0.95rem;
+    margin-top: -20px;
+    color: black;
+    letter-spacing: -1px;
+    margin-top: 10px;
+}
+
+.nyhedsbrev__form {
+    width: 330px;
+    font-family: var(--nav_font_family);
+}
+
+.form__buttonBrev {
+    width: 70px;
+    height: 30px;
+    float: right;
+    margin-top: 20px;
+    outline: none;
+    border-radius: 5px;
+    border: none;
+    background-color: blue;
+    color: white;
+    font-family: var(--nav_font_family);
+}
+
+.form__imputBrevEmail {
+    width: 150px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid lightblue;
+    padding-left: 10px;
+}
+
+.form__imputBrevName {
+    padding-left: 10px;
+    width: 150px;
+    height: 25px;
+    border-radius: 5px;
+    border: none;
+    border: 1px solid lightblue;
+}
