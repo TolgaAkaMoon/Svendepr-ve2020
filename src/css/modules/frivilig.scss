@@ -7,18 +7,24 @@
 .frivilig__title {
     color: rgb(0, 102, 255);
     letter-spacing: -1px;
-    
+    text-align: center;
+    padding-top: 20px;
+    margin-left: -865px;
 }
 
 .frivilig__section {
     font-family: var(--nav_font_family);
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
+    padding-bottom: 50px;
+    flex-wrap: wrap;
+    padding:5px
 }
 
 .frivilig__box {
+    margin: 18px;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
     border-bottom-left-radius: 5px;
