@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", function () {
       })
         .then((response) => response.json())
         .then((about) => {
-            console.log(about)
             about.forEach(omos => {
                 document.querySelector(".about").innerHTML += `
                 <section class="about__section">
@@ -15,9 +14,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 `
             });
         })
-        .catch((err) => {
-          console.log(err);
-        });
+    .catch((err) => {
+        console.log(err);
+    });
 
 
 // Volunteers Script
@@ -59,6 +58,21 @@ document.addEventListener("DOMContentLoaded", function () {
       console.log(err);
     });
 
+
+    fetch("https://svende-api-tolga-fixed.herokuapp.com/api/v1/adoptsections", {
+        method: "get",
+      })
+        .then((response) => response.json())
+        .then((banner) => {
+            console.log(banner)
+            banner.forEach(dyrNod => {
+                document.querySelector(".box__text").textContent = dyrNod.title
+                document.querySelector(".box__desc").textContent = dyrNod.content
+            });
+        })
+    .catch((err) => {
+        console.log(err);
+    });
 
     // Animals Script
   fetch("https://svende-api-tolga-fixed.herokuapp.com/api/v1/animals", {
