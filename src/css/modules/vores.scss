@@ -1,5 +1,7 @@
 .vores {
-
+    width: 100vw;
+    height: auto;
+    font-family: var(--nav_font_family);
 }
 
 .vores__box {
@@ -7,29 +9,42 @@
 }
 
 .box__titleVores {
-
+    color: rgb(0, 102, 255);
+    letter-spacing: -1px;
+    margin: 0;
 }
 
 .box__countVores {
-
+    font-size: 0.95rem;
+    color: black;
+    letter-spacing: -1px;
+    margin: 0;
 }
 
 .vores__animals {
+    width: 100vw;
+    height: 300px;  
+    display: grid;
+    grid-row: auto;
+    grid-template-columns: 400px 400px;
+    font-family: var(--nav_font_family);
+}
+
+.animals__animal {
 
 }
 
 
-
-.animals__img {
-
-}
-
-.animals__title {
+.animal__img {
 
 }
-.animals__desc {
+
+.animal__title {
 
 }
-.animals__time {
+.animal__desc {
+
+}
+.animal__time {
 
 }
