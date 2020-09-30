@@ -5,16 +5,62 @@ document.addEventListener("DOMContentLoaded", function () {
     let subName = document.querySelector(".form__imputBrevName")
     let subButton = document.querySelector(".form__buttonBrev")
     let subError = document.querySelector(".form__errorHandler")
+    let subEmailFormat = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
     subButton.addEventListener("click", function() {
-        if (subEmail.value !== "") {
+        if (subEmail.value !== "" & subName !== "") {
+          subError.style.opacity = "0"
           subEmail.style.backgroundColor ="white";
+          if (subEmail.value.match(subEmailFormat)) {
+            subError.textContent = "Vent venligst...";
+            subError.style.opacity = "1"
+            subEmail.style.backgroundColor ="white";
+
+
+            fetch("https://svende-api-tolga-fixed.herokuapp.com/api/v1/subscribers", {
+              "method": "POST",
+              "headers": {
+                "Content-Type": "application/x-www-form-urlencoded"
+              },
+              "body": `name=${subName.value}&email=${subEmail.value}`
+            })
+      
+              .then((response) => response.json())
+              .then((data) => {
+                console.log(data)
+                subError.style.color ="Green"
+                subError.textContent = "Du er nu tilmeldt til vores nyhedsbrev med E-mailen" + " " + data.email;
+                subError.style.opacity = "1"
+              })
+              .catch((err) => {
+                subError.style.color ="red"
+                subError.textContent = "Dette E-mail er allerade tilmeldt";
+                subError.style.opacity = "1"
+              });
+
+
+
+
+
+
+
+
+          }
+          else {
+            subError.textContent = "Forkert E-mail";
+            subError.style.opacity = "1"
+            subEmail.style.backgroundColor ="rgba(255, 0, 0, 0.250)";
+          }
         } else {
           subEmail.style.backgroundColor ="rgba(255, 0, 0, 0.250)";
+          subError.textContent = "Alle felter skal udfyldes!!";
+          subError.style.opacity = "1"
         }
         if (subName.value !== "") {
           subName.style.backgroundColor ="white";
         } else {
           subName.style.backgroundColor ="rgba(255, 0, 0, 0.250)";
+          subError.textContent = "Alle felter skal udfyldes!!";
+          subError.style.opacity = "1"
         }
     })
 
