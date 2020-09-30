@@ -1,5 +1,35 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    // Newsletter Script
+    let subEmail = document.querySelector(".form__imputBrevEmail")
+    let subName = document.querySelector(".form__imputBrevName")
+    let subButton = document.querySelector(".form__buttonBrev")
+    let subError = document.querySelector(".form__errorHandler")
+    subButton.addEventListener("click", function() {
+        if (subEmail.value !== "") {
+          subEmail.style.backgroundColor ="white";
+        } else {
+          subEmail.style.backgroundColor ="rgba(255, 0, 0, 0.250)";
+        }
+        if (subName.value !== "") {
+          subName.style.backgroundColor ="white";
+        } else {
+          subName.style.backgroundColor ="rgba(255, 0, 0, 0.250)";
+        }
+    })
+
+    fetch("https://svende-api-tolga-fixed.herokuapp.com/api/v1/abouts", {
+        method: "get",
+      })
+        .then((response) => response.json())
+        .then((about) => {
+        })
+    .catch((err) => {
+        console.log(err);
+    });
+    
+
+    // About Script
     fetch("https://svende-api-tolga-fixed.herokuapp.com/api/v1/abouts", {
         method: "get",
       })

@@ -2,16 +2,16 @@
 
 - opgave navn
 - Tolga Özdemir - WUHF02
-+ Brugte Stack:
++ Brugte Stacks:
   - HTML
   - CSS
   - JavaScript
   - Gulp
   - EJS
   - SCSS
-  - Flickity
   - Netlify
   - GitHub
+  - Herokuu for API Host
 
 - __[Mit Site](https://svendeprove-tolga.netlify.app/)__ 
 - __[Mit Login](https://svendeprove-tolga.netlify.app/admin)__ 
