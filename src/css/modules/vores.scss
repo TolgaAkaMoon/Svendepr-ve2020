@@ -2,49 +2,73 @@
     width: 100vw;
     height: auto;
     font-family: var(--nav_font_family);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .vores__box {
-
+    margin-top: 30px;
+    margin-left: -845px;
 }
 
 .box__titleVores {
+    font-size: 1.75rem;
     color: rgb(0, 102, 255);
     letter-spacing: -1px;
     margin: 0;
 }
 
 .box__countVores {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: black;
     letter-spacing: -1px;
     margin: 0;
 }
 
 .vores__animals {
-    width: 100vw;
-    height: 300px;  
+    margin-top: 30px;
+    width: 970px;
+    height: auto;  
     display: grid;
     grid-row: auto;
-    grid-template-columns: 400px 400px;
+    grid-template-columns: 460px 460px;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
     font-family: var(--nav_font_family);
+    grid-column-gap: 55px;
+    grid-row-gap: 40px;
 }
 
 .animals__animal {
-
+    width: 470px;
+    background-color: white;
+    border: 1px solid rgba(0, 0, 0, 0.219);
+    border-radius: 5px;
+    display: flex;
 }
 
 
 .animal__img {
-
+    width: 200px;
+    height: 250px;
+    border-radius: 5px;
 }
 
 .animal__title {
-
+    margin-left: 15px;
 }
 .animal__desc {
-
+    margin-left: 15px;
+    font-size: 0.85rem;
+    width: 230px;
+    line-height: 17px;
+    letter-spacing: -0.5px;
 }
 .animal__time {
-
+    margin-left: 15px;
+    font-size: 0.78rem;
+    opacity: 0.5;
 }
