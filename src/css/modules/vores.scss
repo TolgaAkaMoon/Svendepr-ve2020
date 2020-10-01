@@ -43,11 +43,13 @@
 }
 
 .animals__animal {
+    color: black;
     width: 470px;
     background-color: white;
     border: 1px solid rgba(0, 0, 0, 0.219);
     border-radius: 5px;
     display: flex;
+    text-decoration: none;
 }
 
 

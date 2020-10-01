@@ -162,14 +162,14 @@ document.addEventListener("DOMContentLoaded", function () {
         );
         let dateF = animal.createdAt;
         document.querySelector(".vores__animals").innerHTML += `
-                <div class="animals__animal">
+                <a href="" class="animals__animal">
                     <img class="animal__img" src="${fixedUrl}">
                     <section>
                         <h3 class="animal__title">${animal.name}</h3>
                         <p class="animal__desc">${animal.description}</p>
                         <p class="animal__time">Været på internettet i ${nyTid} dage.</p>
                     </section>
-                </div>
+                </a>
                 `;
       });
     })
