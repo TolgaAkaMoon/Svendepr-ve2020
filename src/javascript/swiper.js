@@ -5,7 +5,6 @@ fetch(apiUrl)
   .then((gallery) => {
     let carouselDOM = document.querySelector(".carousel");
     gallery.forEach((element) => {
-      console.log(element.url)
       carouselDOM.innerHTML += `<div class="carousel-cell"><img data-flickity-lazyload="${element.url}"></div>`;
     });
 

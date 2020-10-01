@@ -27,10 +27,8 @@ document.addEventListener("DOMContentLoaded", function () {
             subError.style.opacity = "1";
             subError.style.color = "red";
           }
-
         })
         .catch((err) => {
-          console.log(err)
         });
     } else {
       if (subEmail.value !== "" && subName !== "") {
@@ -52,7 +50,6 @@ document.addEventListener("DOMContentLoaded", function () {
           )
             .then((response) => response.json())
             .then((data) => {
-              console.log(data)
               subError.style.color = "Green";
               subError.textContent = "Du er nu tilmeldt til vores nyhedsbrev!";
               subError.style.opacity = "1";
@@ -66,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
               subButton.style.backgroundColor = "red";
             })
             .catch((err) => {
-              console.log(err)
               subError.style.color = "red";
               subError.textContent = "Dette E-mail er allerede tilmeldt";
               subError.style.opacity = "1";
@@ -117,7 +113,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     })
     .catch((err) => {
-      console.log(err);
     });
 
   // Volunteers Script
@@ -157,7 +152,6 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     })
     .catch((err) => {
-      console.log(err);
     });
 
   fetch("https://svende-api-tolga-fixed.herokuapp.com/api/v1/adoptsections", {
@@ -165,14 +159,12 @@ document.addEventListener("DOMContentLoaded", function () {
   })
     .then((response) => response.json())
     .then((banner) => {
-      console.log(banner);
       banner.forEach((dyrNod) => {
         document.querySelector(".box__text").textContent = dyrNod.title;
         document.querySelector(".box__desc").textContent = dyrNod.content;
       });
     })
     .catch((err) => {
-      console.log(err);
     });
 
   // Animals Script
@@ -210,6 +202,5 @@ document.addEventListener("DOMContentLoaded", function () {
       });
     })
     .catch((err) => {
-      console.log(err);
     });
 });
