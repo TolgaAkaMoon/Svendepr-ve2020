@@ -190,7 +190,7 @@ document.addEventListener("DOMContentLoaded", function () {
         );
         let dateF = animal.createdAt;
         document.querySelector(".vores__animals").innerHTML += `
-                <a href="/dyr${animal.id}" class="animals__animal">
+                <a href="/dyr/?animal=${animal.id}" class="animals__animal">
                     <img class="animal__img" src="${fixedUrl}">
                     <section>
                         <h3 class="animal__title">${animal.name}</h3>

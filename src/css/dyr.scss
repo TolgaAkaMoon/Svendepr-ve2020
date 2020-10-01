@@ -1,0 +1,14 @@
+body {
+	font-family: var(--nav_font_family);
+	overflow-x: hidden;
+    scroll-behavior: smooth;
+    background: #E2EDFF;
+}
+
+@import "variables";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+@import "modules/nav";
+
+@import "modules/single";

@@ -1,0 +1,38 @@
+.single {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #E2EDFF;
+    font-family: var(--nav_font_family);
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.single__name {
+    color: black;
+}
+
+.single__desc {
+    color: black;
+    width: 500px;
+}
+
+.single__created {
+    color: black;
+    opacity: 0.5;
+}
+
+.single__img {
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.single__back {
+    margin-top: 60px;
+    width: 70px;
+    border-radius: 5px;
+    border: 1px solid black;
+}
