@@ -10,7 +10,7 @@
 }
 
 .forening-banner__box {
-    margin-left: -540px;
+    margin-left: -85px;
     margin-top: 50px;
 }
 
@@ -25,4 +25,11 @@
     margin-top: -20px;
     color: white;
     letter-spacing: -1px;
+}
+
+@media only screen and (max-width: 768px) {
+    .forening-banner__box {
+        margin-left: 20px;
+        width: 320px;
+    }
 }

@@ -98,17 +98,18 @@ document.addEventListener("DOMContentLoaded", function () {
           document.querySelector(".frivilig__section").innerHTML += `
                 <div class="frivilig__box">
                 <div class="box__textFrivilig"><span class="textFrivilig__span">${volunteer.title}</span></div>
-                <div class="box__container">
+                <div class="box__containerFrivilig">
                     <img class="container__imgFrivilig" src="${volunteerUrl}">
                     <p class="container__descFrivilig">${volunteer.content}</p>
                     </div>
+                    <div class="box__bottomFrivilig"></div>
                 </div>
                 `;
         } else {
           document.querySelector(".frivilig__section").innerHTML += `
                 <div class="frivilig__box">
                 <div class="box__textFrivilig"><span class="textFrivilig__span">${volunteer.title}</span></div>
-                <div class="box__container">
+                <div class="box__containerFrivilig">
                     <img class="container__imgFrivilig" src="${volunteerUrl}">
                     <p class="container__descFrivilig">${volunteer.content}</p>
                     </div>

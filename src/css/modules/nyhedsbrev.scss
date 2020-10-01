@@ -74,3 +74,43 @@
 .form__errorHandler {
     opacity: 0;
 }
+
+@media only screen and (max-width: 768px) {
+    .nyhedsbrev {
+        padding-top: 30px;
+        height: 250px;
+        flex-direction: column;
+    }
+    .nyhedsbrev__box {
+        width: auto;
+        margin-right: 20px;
+    }
+    .box__textBrev {
+        margin-left: 34px;
+    }
+    
+    .box__descBrev {
+        margin-left: 36px;
+    }
+
+    .nyhedsbrev__form {
+        width: 300px;
+        font-family: var(--nav_font_family);
+    }
+
+    .form__buttonBrev {
+        width: 100px;
+        height: 63px;
+        float: right;
+        margin-right: 15px;
+        margin-top: -29px;
+    }
+    .form__errorHandler {
+        margin-top: 5px;
+        width: 285px;
+    }
+
+    .form__imputBrevName {
+        margin-top: 5px
+    }
+}
