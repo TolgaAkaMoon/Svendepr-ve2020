@@ -20,6 +20,7 @@
     color: black;
     letter-spacing: -1px;
     list-style-type: none;
+    font-style: italic;
 }
 
 .kontakt__header {
@@ -62,22 +63,28 @@
         margin-top: 65px;
         width: 100vw;
         font-size: 0.85rem;
-    }   
+        flex-direction: column;
+        height: 400px;
+    }
 
-    
+    .kontakt__header {
+        margin-top: -65px;
+    }
+
     .footer__kontakt {
-        margin-left: 10px;
+        margin-left: 36px;
+        width: 270px;
     }
 
     .footer__partner {
-        margin-top: 33px;
+        margin-left: 36px;
         margin-right: 12px;
     }
     .copyright__text {
         letter-spacing: -1px;
-        margin-left: -35px;
         margin-top: 200px;
         width: 200px;
         position: absolute;
+        margin-left: 92px;
     }
 }

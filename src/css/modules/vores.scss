@@ -76,6 +76,7 @@
 }
 
 @media only screen and (max-width: 768px) {
+
     .vores__box {
         margin-top: 30px;
         margin-left: -170px;
@@ -83,6 +84,7 @@
     .vores__animals {
         display: flex;
         flex-direction: column;
+        width: 300px;
     }
     .animals__animal {
         width: 300px; 

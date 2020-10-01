@@ -52,16 +52,18 @@
 }
 
 .logo__img {
-  width: 50px;
-  height: 40px;
+  margin-left: 30px;
+  width: 40px;
+  height: 30px;
 }
 
 .logo__text {
+  max-width: 220px;
   flex-grow: 2;
-  margin-left: 10px;
+  margin-left: 6px;
   font-family: var(--nav_font_family);
   color: black;
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   letter-spacing: -2px;
 }
 
@@ -153,7 +155,7 @@ ul li a {
   grid-column: 2;
   height: 50px;
   width: 50px;
-  margin-right: 10px;
+  margin-right: 40px;
   background-size: cover;
   border: none;
   cursor: pointer;
@@ -174,6 +176,21 @@ ul li a {
 }
 
 @media only screen and (min-width: 768px) {
+
+  .topnav__logo {
+    margin-left: 40px;
+  }
+
+  .logo__text {
+    font-size: 1.5rem;
+    
+  }
+
+  .logo__img {
+    margin-left: -15px;
+    width: 50px;
+    height: 40px;
+  }
 
   ul li a {
     flex-grow: 0;
