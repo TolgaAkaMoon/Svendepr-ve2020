@@ -42,7 +42,6 @@
     letter-spacing: -1px;
     text-decoration: none;
     font-size: var(--nav_font_size);
-
   }
 
   .ul__link {
@@ -77,15 +76,39 @@
   }
   
   @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
+
+    .topnav__ul {
+      margin-left: 0px;}
+    
+    .topnav a {display: none;}
     .topnav a.icon {
       float: right;
+      margin-right: 25px;
       display: block;
+      transform: scale(1.5);
+      outline: none;
     }
   }
   
   @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
+    .topnav {
+      gap: 0px;
+    }
+
+    .logo__text {
+      flex-grow: 0;
+      margin-left: 10px;
+      width: 221px;
+      font-family: var(--nav_font_family);
+      color: black;
+      font-size: 1.4rem;
+      letter-spacing: -2px;
+    }
+
+    .topnav.responsive {
+      position: relative;
+    }
+
     .topnav.responsive .icon {
       position: absolute;
       right: 0;
