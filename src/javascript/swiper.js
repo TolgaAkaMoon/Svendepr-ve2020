@@ -1,20 +1,48 @@
-let apiUrl = "http://night-club-api.herokuapp.com/assets";
+let apiUrl = "https://svende-api-tolga-fixed.herokuapp.com/api/v1/animals";
 
-fetch(apiUrl)
+fetch(apiUrl, {
+  method: "get",
+})
   .then((res) => res.json())
-  .then((gallery) => {
+  .then((data) => {
     let carouselDOM = document.querySelector(".carousel");
-    gallery.forEach((element) => {
-      carouselDOM.innerHTML += `<div class="carousel-cell"><img data-flickity-lazyload="${element.url}"></div>`;
+    data.forEach((animal) => {
+      let idag = new Date();
+      let dageSiden = new Date(animal.createdAt);
+      dageSiden.setHours("0", "0", "0", "0");
+      idag.setHours("0", "0", "0", "0");
+      let forskellenTid = dageSiden.getTime() - idag.getTime();
+      let forskelleniDage = forskellenTid / (1000 * 3600 * 24);
+      let nyTid = `${forskelleniDage}`.replace("-", "");
+
+      data.length + " " + "Dyr";
+
+      
+      let fixedUrl = animal.asset.url.replace(
+        "localhost:4000",
+        "svende-api-tolga-fixed.herokuapp.com"
+      );
+      let dateF = animal.createdAt;
+
+      carouselDOM.innerHTML += `
+      <a href="/dyr/?animal=${animal.id}" class="animals__animal">
+      <img class="animal__img" src="${fixedUrl}">
+      <section>
+          <h3 class="animal__title">${animal.name}</h3>
+          <p class="animal__desc">${animal.description}</p>
+          <p class="animal__time">Været på internettet i ${nyTid} dage.</p>
+      </section>
+    </a>      
+      `;
     });
 
-    //Init Flickity
     let options = {
-      cellAlign: "left",
+      setGallerySize: true,
+      cellAlign: "center",
       wrapAround: true,
       autoPlay: 3000,
       pauseAutoPlayOnHover: true,
-      initialIndex: 1,
+      initialIndex: 0,
       lazyLoad: 2,
       imagesLoaded: true,
     };

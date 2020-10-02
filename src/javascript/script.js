@@ -167,51 +167,31 @@ document.addEventListener("DOMContentLoaded", function () {
   })
     .then((response) => response.json())
     .then((banner) => {
-        document.querySelector(".box__text").textContent = banner[0].title;
-        document.querySelector(".box__desc").textContent = banner[0].content;
-
-        document.querySelector(".box__text2").textContent = banner[1].title;
-        document.querySelector(".box__desc2").textContent = banner[1].content;
-
-        document.querySelector(".box__text3").textContent = banner[2].title;
-        document.querySelector(".box__desc3").textContent = banner[2].content;
-    })
-    .catch((err) => {
-    });
-
-  // Animals Script
-  fetch("https://svende-api-tolga-fixed.herokuapp.com/api/v1/animals", {
-    method: "get",
-  })
-    .then((response) => response.json())
-    .then((data) => {
-      document.querySelector(".box__countVores").innerHTML =
-        data.length + " " + "Dyr";
-      data.forEach((animal) => {
-        let idag = new Date();
-        let dageSiden = new Date(animal.createdAt);
-        dageSiden.setHours("0", "0", "0", "0");
-        idag.setHours("0", "0", "0", "0");
-        let forskellenTid = dageSiden.getTime() - idag.getTime();
-        let forskelleniDage = forskellenTid / (1000 * 3600 * 24);
-        let nyTid = `${forskelleniDage}`.replace("-", "");
-
-        let fixedUrl = animal.asset.url.replace(
+      console.log(banner)
+        let bannerUrl1 = banner[0].asset.url.replace(
           "localhost:4000",
           "svende-api-tolga-fixed.herokuapp.com"
         );
-        let dateF = animal.createdAt;
-        document.querySelector(".vores__animals").innerHTML += `
-                <a href="/dyr/?animal=${animal.id}" class="animals__animal">
-                    <img class="animal__img" src="${fixedUrl}">
-                    <section>
-                        <h3 class="animal__title">${animal.name}</h3>
-                        <p class="animal__desc">${animal.description}</p>
-                        <p class="animal__time">Været på internettet i ${nyTid} dage.</p>
-                    </section>
-                </a>
-                `;
-      });
+        document.querySelector(".box__text").textContent = banner[0].title;
+        document.querySelector(".box__desc").textContent = banner[0].content;
+        document.querySelector(".forening-banner").style.backgroundImage = `url("${bannerUrl1}")`
+
+        let bannerUrl2 = banner[1].asset.url.replace(
+          "localhost:4000",
+          "svende-api-tolga-fixed.herokuapp.com"
+        );
+        document.querySelector(".box__text2").textContent = banner[1].title;
+        document.querySelector(".box__desc2").textContent = banner[1].content;
+        document.querySelector(".forening-banner2").style.backgroundImage = `url("${bannerUrl2}")`
+
+        let bannerUrl3 = banner[2].asset.url.replace(
+          "localhost:4000",
+          "svende-api-tolga-fixed.herokuapp.com"
+        );
+        document.querySelector(".box__text3").textContent = banner[2].title;
+        document.querySelector(".box__desc3").textContent = banner[2].content;
+        document.querySelector(".forening-banner1").style.backgroundImage = `url("${bannerUrl3}")`
+        
     })
     .catch((err) => {
     });
