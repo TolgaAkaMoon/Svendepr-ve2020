@@ -28,6 +28,9 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".single__created").innerHTML = "Dette produkt har været på internettet i" + " " + nyTid + " " + "dage";
       document.querySelector(".single__img").setAttribute("src", petUrl)
     })
+    document.querySelector(".single__back").addEventListener("click", function() {
+        window.location.href = '/#vores';
+    })
     .catch((err) => {
       console.log(err);
     });

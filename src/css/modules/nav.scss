@@ -10,6 +10,35 @@
   font-family: var(--nav_font_family);
 }
 
+.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  height: 300px;
+  top: 0;
+}
+
+.topnav a {
+  font-family: var(--nav_font_family);
+  color: var(--nav_font_color);
+  text-align: center;
+  margin: 13px 5px;
+  letter-spacing: -1px;
+  text-decoration: none;
+  font-size: var(--nav_font_size);
+}
+
+.topnav a:hover {
+  color: black;
+}
+
+.topnav a.active {
+  color: black;
+}
+
 .topnav__logo {
   color: var(--nav_font_color);
   width: 400px;
@@ -38,6 +67,114 @@
   letter-spacing: -2px;
 }
 
+.header {
+  width: 100vw;
+  z-index: 15;
+  position: absolute;
+}
+
+.header__portfolio {
+  transition: all 0.2s ease-in-out;
+  position: absolute;
+  z-index: 1;
+  margin-top: 16px;
+  margin-left: 40px;
+}
+
+@keyframes leftToRight {
+  from {
+    transform: translateX(0vw);
+  }
+  to {
+    transform: translateX(100vw);
+  }
+}
+
+#navLeftToRight {
+  animation: leftToRight 0.6s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  position: absolute;
+  z-index: 2;
+  height: 300px;
+  top: 0; 
+}
+
+nav ul {
+  display: none;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-color: #030203;
+  transition: all 0.1s ease-in-out;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 2;
+}
+
+ul li a {
+  flex-grow: 0;
+  transition: all 0.1s ease-in-out;
+  text-decoration: none;
+  font-family: var(--nav_font_family);
+  text-transform: uppercase;
+  color: #ffffff;
+  cursor: pointer;
+  z-index: 3;
+}
+
+#checkbox {
+  display: none;
+}
+
+@keyframes rightToLeft {
+  from {
+    transform: translateX(100vw);
+  }
+  to {
+    transform: translateX(0vw);
+  }
+}
+
+#checkboxLabel {
+  transition: all 0.1s ease-in-out;
+  content: url(../images/menu/bmenu.svg);
+  stroke: red;
+  outline: none;
+  position: absolute;
+  right: 0;
+  z-index: 6;
+  display: inline-block;
+  grid-column: 2;
+  height: 50px;
+  width: 50px;
+  margin-right: 40px;
+  background-size: cover;
+  border: none;
+  cursor: pointer;
+}
+
+.activeJob {
+  color: white;
+}
+
+:focus {
+  outline: none;
+}
+
+.checkbox__burger {
+  width: 200px;
+  height: 2px;
+  background-color: white;
+}
+
 @media only screen and (min-width: 768px) {
 
   .topnav__logo {
@@ -50,8 +187,67 @@
   }
 
   .logo__img {
-    margin-left: -15px;
+    margin-left: -20px;
     width: 50px;
     height: 40px;
+  }
+
+  ul li a {
+    flex-grow: 0;
+    font-size: 0.85rem;
+  }
+
+  .header__portfolio {
+    margin-top: 16px;
+    margin-left: 70px;
+  }
+
+  #checkboxLabel {
+    display: none;
+    content: none;
+    position: absolute;
+  }
+
+  #checkbox {
+    display: none;
+    content: none;
+    position: absolute;
+  }
+
+  .header {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .header__nav {
+    position: sticky;
+  }
+
+  #uList {
+    display: flex;
+    justify-content: space-evenly;
+    width: auto;
+    grid-template-rows: 0;
+    background-color: transparent;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    align-content: center;
+  }
+
+  nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    height: 75px;
+    margin: 0;
+  }
+
+  nav ul li {
+    padding: 0;
+    text-decoration: none;
   }
 }
