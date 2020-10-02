@@ -167,7 +167,6 @@ document.addEventListener("DOMContentLoaded", function () {
   })
     .then((response) => response.json())
     .then((banner) => {
-      console.log(banner)
         let bannerUrl1 = banner[0].asset.url.replace(
           "localhost:4000",
           "svende-api-tolga-fixed.herokuapp.com"
@@ -190,7 +189,7 @@ document.addEventListener("DOMContentLoaded", function () {
         );
         document.querySelector(".box__text3").textContent = banner[2].title;
         document.querySelector(".box__desc3").textContent = banner[2].content;
-        document.querySelector(".forening-banner1").style.backgroundImage = `url("${bannerUrl3}")`
+        document.querySelector(".forening-banner3").style.backgroundImage = `url("${bannerUrl3}")`
         
     })
     .catch((err) => {
