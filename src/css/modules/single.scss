@@ -17,11 +17,13 @@
 .single__desc {
     color: black;
     width: 500px;
+    font-size: 1rem;
 }
 
 .single__created {
     color: black;
     opacity: 0.5;
+    font-size: 1rem;
 }
 
 .single__img {
@@ -35,4 +37,21 @@
     width: 70px;
     border-radius: 5px;
     border: 1px solid black;
+}
+
+@media only screen and (max-width: 768px) {
+    .single__desc {
+        width: 80%;
+        font-size: 0.9rem;
+    }
+
+    
+    .single__img {
+        width: 80%;
+    }
+
+    .single__created {
+        width: 80%;
+        font-size: 0.8rem;
+    }
 }
