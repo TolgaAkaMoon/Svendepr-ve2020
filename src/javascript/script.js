@@ -15,6 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
             subButton.value = "Tilmeld";
             subError.textContent = "Du er nu afmeldt";
             subError.style.opacity = "1";
+            subError.style.color = "green";
             subEmail.value = "";
             subName.value = "";
             subEmail.style.color = "black";
@@ -22,6 +23,9 @@ document.addEventListener("DOMContentLoaded", function () {
             subEmail.readOnly = false;
             subName.readOnly = false;
             subButton.style.backgroundColor = "rgb(0, 102, 255)";
+            setTimeout(() => {
+              subError.style.opacity = "0";
+            }, 3000);
           } else {
             subError.textContent = "Kunne ikke aflmelde fra nyhedsbrevet";
             subError.style.opacity = "1";
@@ -66,20 +70,24 @@ document.addEventListener("DOMContentLoaded", function () {
               subError.style.color = "red";
               subError.textContent = "Dette E-mail er allerede tilmeldt";
               subError.style.opacity = "1";
+              subError.style.color = "red";
             });
         } else {
           subError.textContent = "Forkert E-mail";
           subError.style.opacity = "1";
           subEmail.style.backgroundColor = "rgba(255, 0, 0, 0.200)";
+          subError.style.color = "red";
         }
       } else {
         subEmail.style.backgroundColor = "rgba(255, 0, 0, 0.200)";
         subError.textContent = "Alle felter skal udfyldes!!";
         subError.style.opacity = "1";
+        subError.style.color = "red";
       }
       if (subName.value !== "") {
         subName.style.backgroundColor = "white";
       } else {
+        subError.style.color = "red";
         subName.style.backgroundColor = "rgba(255, 0, 0, 0.200)";
         subError.textContent = "Alle felter skal udfyldes!!";
         subError.style.opacity = "1";
