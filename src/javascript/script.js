@@ -167,10 +167,14 @@ document.addEventListener("DOMContentLoaded", function () {
   })
     .then((response) => response.json())
     .then((banner) => {
-      banner.forEach((dyrNod) => {
-        document.querySelector(".box__text").textContent = dyrNod.title;
-        document.querySelector(".box__desc").textContent = dyrNod.content;
-      });
+        document.querySelector(".box__text").textContent = banner[0].title;
+        document.querySelector(".box__desc").textContent = banner[0].content;
+
+        document.querySelector(".box__text2").textContent = banner[1].title;
+        document.querySelector(".box__desc2").textContent = banner[1].content;
+
+        document.querySelector(".box__text3").textContent = banner[2].title;
+        document.querySelector(".box__desc3").textContent = banner[2].content;
     })
     .catch((err) => {
     });

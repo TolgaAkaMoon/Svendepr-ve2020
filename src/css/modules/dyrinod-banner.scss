@@ -1,4 +1,4 @@
-.forening-banner {
+.forening-banner2 {
     width: 100vw;
     height: 300px;
     background-image: url(../images/header/kittens.jpg);
@@ -9,18 +9,18 @@
     font-family: var(--nav_font_family);
 }
 
-.forening-banner__box {
-    margin-left: -499px;
+.forening-banner__box2 {
+    margin-left: -523px;
     margin-top: 50px;
 }
 
-.box__text {
+.box__text2 {
     color: white;
     font-size: 2.5rem;
     letter-spacing: -1px;
 }
 
-.box__desc {
+.box__desc2 {
     font-size: 1rem;
     margin-top: -20px;
     color: white;
@@ -28,15 +28,15 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .forening-banner__box {
+    .forening-banner__box2 {
         margin-top: 0px;
         margin-left: -4px;
         width: 295px;
     }
-    .forening-banner {
+    .forening-banner2 {
         height: 200px;
     }
-    .box__text {
+    .box__text2 {
         font-size: 2rem;
     }
 }
