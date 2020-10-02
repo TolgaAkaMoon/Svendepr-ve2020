@@ -6,13 +6,12 @@
     height: 65px;
     align-items: center;
     flex-direction: row;
-    background-color: var(--nav_background_color);
+    background-color: transparent;
     font-family: var(--nav_font_family);
   }
   
   .topnav__logo {
     color: var(--nav_font_color);
-    width: 400px;
     height: 65px;
     flex-grow: 0;
     flex-shrink: 1;
@@ -29,7 +28,7 @@
   }
   
   .logo__text {
-    max-width: 220px;
+    max-width: 400px;
     flex-grow: 2;
     margin-left: 6px;
     font-family: var(--nav_font_family);

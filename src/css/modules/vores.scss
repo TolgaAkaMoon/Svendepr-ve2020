@@ -54,6 +54,7 @@
 
 
 .animal__img {
+    object-fit: cover;
     width: 200px;
     height: 250px;
     border-radius: 5px;
@@ -92,6 +93,7 @@
     }
         
     .animal__img {
+        object-fit: cover;
         width: 100px;
         height: 150px;
         border-radius: 5px;
