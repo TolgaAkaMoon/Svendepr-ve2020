@@ -101,16 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  /*     fetch("https://svende-api-tolga-fixed.herokuapp.com/api/v1/abouts", {
-        method: "get",
-      })
-        .then((response) => response.json())
-        .then((about) => {
-        })
-    .catch((err) => {
-        console.log(err);
-    }); */
-
   // About Script
   fetch("https://svende-api-tolga-fixed.herokuapp.com/api/v1/abouts", {
     method: "get",

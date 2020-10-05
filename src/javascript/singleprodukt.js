@@ -25,7 +25,7 @@ document.addEventListener("DOMContentLoaded", function () {
       document.querySelector(".single__name").innerHTML = pet.name;
       document.querySelector(".single__desc").innerHTML = pet.description;
        document.querySelector(".single__age").innerHTML = pet.age + " år gammel";
-      document.querySelector(".single__created").innerHTML = "Dette produkt har været på internettet i" + " " + nyTid + " " + "dage";
+      document.querySelector(".single__created").innerHTML = "Dette dyr har været på internatet i" + " " + nyTid + " " + "dage";
       document.querySelector(".single__img").setAttribute("src", petUrl)
     })
     document.querySelector(".single__back").addEventListener("click", function() {
