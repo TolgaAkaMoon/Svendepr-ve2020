@@ -1,4 +1,10 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+  const params = new URLSearchParams(window.location.search);
+  const path = window.location.pathname.replace(/\//g, "");
+  const animalId = params.get("animal");
+  console.log(path)
+
   // Newsletter Script
   let subEmail = document.querySelector(".form__imputBrevEmail");
   let subName = document.querySelector(".form__imputBrevName");

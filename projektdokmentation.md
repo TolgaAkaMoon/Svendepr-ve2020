@@ -15,10 +15,10 @@
   - Herokuu for API Host
 
 - __[Mit Site](https://svendeprove-tolga.netlify.app/)__ 
-- __[Mit Login](https://svendeprove-tolga.netlify.app/admin)__ 
+- __[Mit Admin Login](https://svendeprove-tolga.netlify.app/admin)__ 
 + Info til login:
   - Brugernavn: admin
-  - Kode: 1234
+  - Adgangskode: 1234
 
 ---
 ### Kanban Board (Lavet på GitHub)
